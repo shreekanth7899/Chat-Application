@@ -1,0 +1,8 @@
+npm init -y
+npm i --save express socket.io
+
+npm i nodemon
+
+change package.json
+start="node app.js"
+dev="nodemon app.js"
