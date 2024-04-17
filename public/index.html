@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Header Part -->
+
 <head>
     <title>Chat Application</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<!-- ---------------------Main UI-------------------- -->
     <h1 class="title ">Chat-Appliaction</h1>
     <div class="main">
         <div class="name">
@@ -17,6 +21,8 @@
             value="anonymous" 
             maxlength="20">
         </div>
+<!-- ---------------------Message Container---------------- -->
+
         <ul class="message-container" id="message-container">
             <li class="message-left">
                 <p class="message">
@@ -37,13 +43,22 @@
             </li>
         </ul>
 
+<!-- ----------------------Typespace and Send Button----------- -->
+
         <form class="message-form" id="message-form">
-            <input type="text" name="message" id="message-input" class="message-input">
+            <input 
+            type="text" 
+            name="message" 
+            id="message-input" 
+            class="message-input"
+            >
             <div class="v-divider"></div>
             <button type="submit" class="send-button"> send <span><i class="fas fa-paper-plane"></i></span></button>
         </form>
     </div>
-    <h3 class="clients-total" id="clients-total">Total Clients: 2</h3>
+    <h3 class="clients-total" id="client-total">Total Clients:</h3>
+
+<!-- -----------------------Scripts------------------------- -->
     
     <script src="/socket.io/socket.io.js"></script>
     <script src="main.js"></script>
