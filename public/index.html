@@ -20,27 +20,17 @@
             class="name-input" 
             value="anonymous" 
             maxlength="20">
+            <div class="dropdown">
+                <button class="dropbtn">More</button>
+                <div class="dropdown-content">
+                  <a href="/options/backup.html">Backup</a>
+                  <!-- <a href="#">Link 3</a> -->
+                </div>
+            </div>
         </div>
 <!-- ---------------------Message Container---------------- -->
 
         <ul class="message-container" id="message-container">
-            <li class="message-left">
-                <p class="message">
-                    john doe
-                    <span> * 26 July 10:20</span>
-                </p>
-            </li>
-            <li class="message-right">
-                <p class="message">
-                    john doe
-                    <span> * 26 July 10:20</span>
-                </p>
-            </li>
-            <li class="message-feedback">
-                <p class="feedback" id="feedback">
-                    Nodemon is typing
-                </p>
-            </li>
         </ul>
 
 <!-- ----------------------Typespace and Send Button----------- -->
@@ -61,6 +51,7 @@
 <!-- -----------------------Scripts------------------------- -->
     
     <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js" integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="main.js"></script>
 </body>
 </html>
