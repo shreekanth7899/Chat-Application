@@ -1,5 +1,4 @@
 const socket = io()
-const mysql = require('mysql2')
 
 const clientsTotal = document.getElementById('client-total')
 const messageContainer = document.getElementById('message-container')
@@ -51,6 +50,45 @@ function addMessageToUI(isOwnMessage, data){
 function scrollTOBottom() {
     messageContainer.scrollTo(0, messageContainer.scrollHeight)
 }
+
+// // Function to handle file upload
+// function uploadFiles() {
+//     const fileInput = document.getElementById('fileInput');
+//     const files = fileInput.files;
+
+//     // Check if any files are selected
+//     if (files.length === 0) {
+//         alert('Please select a file');
+//         return;
+//     }
+
+//     // Create a FormData object to send files to the server
+//     const formData = new FormData();
+
+//     // Append each selected file to the FormData object
+//     for (let i = 0; i < files.length; i++) {
+//         const file = files[i];
+//         formData.append('files', file);
+//     }
+
+//     // Send a POST request to the server with the FormData containing the files
+//     fetch('/upload', {
+//         method: 'POST',
+//         body: formData
+//     })
+//     .then(response => {
+//         if (response.ok) {
+//             alert('Files uploaded successfully');
+//         } else {
+//             throw new Error('Failed to upload files');
+//         }
+//     })
+//     .catch(error => {
+//         console.error('Error uploading files:', error);
+//         alert('An error occurred while uploading files');
+//     });
+// }
+
 
 messageInput.addEventListener('focus', (e) => {
     socket.emit('feedback', {
