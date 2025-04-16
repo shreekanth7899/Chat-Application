@@ -17,3 +17,19 @@ connection.connect((err) => {
 });
 
 module.exports = connection;
+
+// const { MongoClient } = require('mongodb');
+
+// const uri = 'mongodb://localhost:27017/chatApp';
+
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+// client.connect((err) => {
+//     if (err) {
+//         console.error('Error connecting to MongoDB:', err);
+//         return;
+//     }
+//     console.log('Connected to MongoDB');
+// });
+
+// module.exports = client;
